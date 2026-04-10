@@ -23,21 +23,29 @@ stages:
       nfiles: 2
     - path: src/train.py
       hash: md5
-      md5: 808f62da7f7ff29326ab8e5dbbe2e0dd
-      size: 2049
+      md5: 396cc4b4362b6ab5209165aac830d603
+      size: 4659
     params:
       params.yaml:
+        activation: gelu
+        batch_size: 64
         epochs: 5
         lr: 0.001
+        momentum: 0.9
+        optimizer: sgd_momentum
     outs:
+    - path: grad_stats.json
+      hash: md5
+      md5: ef27ce84c7f3bdf253dea34999af6481
+      size: 183
     - path: metrics.json
       hash: md5
-      md5: 075542ed781f36ce0851e01ffad943e3
+      md5: b14f060d38e679aa88d7b4572fb2248d
       size: 28
     - path: model.pt
       hash: md5
-      md5: 6469564de1782a46fe2a3ba89c244fdf
-      size: 56713
+      md5: 475508a21ce6bee96e0a1cffe85731a1
+      size: 56777
   predict:
     cmd: python src/predict.py
     deps:
@@ -47,8 +55,8 @@ stages:
       size: 31441677
     - path: model.pt
       hash: md5
-      md5: 6d33a3810af02167f514c642d04cb737
-      size: 56713
+      md5: 475508a21ce6bee96e0a1cffe85731a1
+      size: 56777
     - path: src/predict.py
       hash: md5
       md5: ec99ceaa5a5d0d5e12f816cbaec2fca8
@@ -56,5 +64,5 @@ stages:
     outs:
     - path: predictions.json
       hash: md5
-      md5: 4854ed7423b807bc7152e0766ec0396d
+      md5: a5a9d0219d753629ca250d0682589206
       size: 923

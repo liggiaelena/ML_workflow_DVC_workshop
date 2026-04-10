@@ -15,10 +15,15 @@ stages:
     params:
       - epochs
       - lr
+      - batch_size
+      - activation
+      - optimizer
+      - momentum
     outs:
       - model.pt
     metrics:
       - metrics.json
+      - grad_stats.json
 
   predict:
     cmd: python src/predict.py

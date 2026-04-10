@@ -52,6 +52,22 @@ dvc repro
 dvc metrics show
 ```
 
+## Team Members
+
+| Name | Student ID |
+|---|---|
+| Emmanuel Ihejiamaizu | 9080005 |
+| Liggia Elena Taboada Cruz | 9085905 |
+| Chao-Chung Liu | 9067679 |
+
+## ML Pipelines in Machine Learning and CI/CD
+
+Machine learning pipelines are structured sequences of steps that automate the journey from raw data to a deployed model. Each step — data preparation, feature engineering, training, evaluation, and inference — is defined as a discrete unit with explicit inputs and outputs. This structure makes workflows reproducible, auditable, and easier to debug compared to ad-hoc scripts.
+
+In the context of CI/CD (Continuous Integration / Continuous Delivery), ML pipelines play the same role that automated build and test pipelines play in software engineering. Just as a code change triggers a CI pipeline that compiles, tests, and validates software, a change in data or model parameters can trigger an ML pipeline that retrains, evaluates, and validates the model before it reaches production.
+
+DVC enables this by defining pipelines in `dvc.yaml` with explicit dependencies between stages. When a dependency changes — a script, a dataset, or a parameter — DVC knows exactly which stages need to rerun and which can be skipped. Combined with Git for code versioning, this gives teams a full audit trail of what ran, on what data, with what parameters, and what results were produced. This is the foundation of MLOps: applying DevOps principles to machine learning so that model development is as reliable, automated, and collaborative as software development.
+
 ## Collaboration Workflow
 
 ```bash
