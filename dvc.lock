@@ -32,11 +32,11 @@ stages:
     outs:
     - path: metrics.json
       hash: md5
-      md5: ada97714bac7f0b76f798745b09ac560
+      md5: 075542ed781f36ce0851e01ffad943e3
       size: 28
     - path: model.pt
       hash: md5
-      md5: be37cdb2f97d646c3d88f88ab9749f18
+      md5: 6469564de1782a46fe2a3ba89c244fdf
       size: 56713
   predict:
     cmd: python src/predict.py
@@ -47,14 +47,14 @@ stages:
       size: 31441677
     - path: model.pt
       hash: md5
-      md5: be59752c31f912d9140d4733ed91be61
+      md5: 6d33a3810af02167f514c642d04cb737
       size: 56713
     - path: src/predict.py
       hash: md5
-      md5: b7baa3b4df9a30a2d7d4cbbb0e9f5691
-      size: 1112
+      md5: ec99ceaa5a5d0d5e12f816cbaec2fca8
+      size: 1088
     outs:
     - path: predictions.json
       hash: md5
-      md5: 1cc5c8fa3518fd70490e2a8ebb2062e9
+      md5: 4854ed7423b807bc7152e0766ec0396d
       size: 923
